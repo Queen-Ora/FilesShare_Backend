@@ -26,7 +26,7 @@ class CreateGroupRequest extends FormRequest
         return [
             'name' =>'required|string|max:255|min:5',
             'description' =>'nullable|string|max:255',
-            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'avatar' => '|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'admin_id' => 'required'
         ];
 

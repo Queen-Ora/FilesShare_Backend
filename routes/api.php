@@ -26,6 +26,9 @@ route::prefix('filesshare')->group(function () {
     // Route::get('/ListGroup', [GroupController::class, 'ListGroup']);
     Route::post('/AddMember/{groupId}', [GroupController::class, 'AddMember']);
     Route::get('/SelectGroups/{memberId}', [GroupController::class, 'SelectGroupOfaMember']);
+
+    route::post('/sendFile/{id}/{groupId}', [GroupController::class, 'sendFile']);
+    route::get('/getFiles/{groupId}', [GroupController::class, 'displayFile']);
     
 
 
